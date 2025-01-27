@@ -1,5 +1,4 @@
 import { ProjectCardType } from "@/app/types"
-import { motion } from "framer-motion"
 import Link from "next/link"
 
 const ProjectCard = ({ name, description, tools, githubLink }: ProjectCardType) => {

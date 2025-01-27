@@ -1,5 +1,3 @@
-import { ProjectCardType } from "@/app/types"
-import { motion } from "framer-motion"
 import Link from "next/link"
 
 const ExperienceCard = ({ name, description, role, tools, githubLink }: any) => {
@@ -10,9 +8,18 @@ const ExperienceCard = ({ name, description, role, tools, githubLink }: any) => 
       <div className="font-rubik text-2xl">{name}</div>
       <div className="text-md mb-4"><span className="text-md font-rubik">Role:</span>{role}</div>
       <div className="mb-4">{description}</div>
-      {tools?.map((tool:any) => {
-        return <div key={`${tool}-tool`}><span className="text-md font-rubik">Tools:</span>{tool}</div>
-      })}
+      <div className="text-md">
+        <span className="text-md font-rubik">Tools:</span>
+        {tools?.map((tool:any, index:number) => {
+          return (
+            <span key={`${tool}-tool`} className="mr-2">
+              {tool}
+              {}
+            </span>
+          )
+        })}
+      
+      </div>
       {githubLink && (
         <div>
           <span className="text-md font-rubik">Github:</span> 
