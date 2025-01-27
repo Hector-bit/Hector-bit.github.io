@@ -7,15 +7,15 @@ const experienceData:any[] = [
     name: 'Pixel Vault',
     role: 'Front-end engineer',
     description: "At Pixelvault, I was responsible for transforming Figma designs into fully functional, pixel-perfect ReactJS implementations. I played a key role in troubleshooting and debugging issues that arose when switching frameworks or integrating new packages, ensuring smooth transitions and maintaining code quality. Additionally, I collaborated closely with backend engineers and QA teams to validate features and ensure sites were optimized and deployment-ready. My time at Pixelvault strengthened my ability to work across teams, adapt to evolving tech stacks, and build seamless, high-performance web experiences.",
-    tools: ['ReactJS', 'NextJS', 'Framer-motion', ''],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
+    tools: ['ReactJS,', 'NextJS,', 'Framer-motion,', 'Tailwind'],
+    // githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
   },
   { 
     name: 'Bellingham Makerspace',
     role: 'Voluteer web developer',
-    description: "At Bellingham MakerSpace, I contributed as a volunteer developer, enhancing user functionality and refining frontend design. Working with WordPress and its plugins, I styled and improved the tool booking system and event/class calendars, making it easier for members to schedule time for equipment. A key focus of my work was ensuring universal design and accessibility, helping create a more inclusive and user-friendly experience for the MakerSpace community.",
-    tools: ['Python'],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
+    description: "At Bellingham MakerSpace, I contributed as a volunteer developer, enhancing user functionality and refining frontend design. Working with WordPress and its plugins, I styled and improved the tool booking system and event/class calendars, making it easier for members to schedule time for the workshop equipment. A key focus of my work was ensuring universal design and accessibility, helping create a more inclusive and user-friendly experience for the MakerSpace community.",
+    tools: ['Wordpress,', 'CSS,', 'Javascript'],
+    // githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
   }
 ]
 
@@ -23,26 +23,14 @@ const projectListData:ProjectCardType[] = [
   { 
     name: 'adventOfCode',
     description: "Advent of Code (AoC) is an annual online event that runs from December 1st to December 25th each year. It features a series of daily programming puzzles that get more difficult every day & participants race to make it to the global leaderboard. I've participated in these challenges for various years to varying degrees and I loved learning about & implementing new algorithms when my brute force solutions wouldn't suffice.",
-    tools: ['python'],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
-  },
-  { 
-    name: 'adventOfCode2',
-    description: "Advent of Code (AoC) is an annual online event that runs from December 1st to December 25th each year. It features a series of daily programming puzzles that get more difficult every day & participants race to make it to the global leaderboard. I've participated in these challenges for various years to varying degrees and I loved learning about & impleneting new algorithms when my brute force solutions wouldn't suffice.",
-    tools: ['python'],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
-  },
-  { 
-    name: 'adventOfCode3',
-    description: "Advent of Code (AoC) is an annual online event that runs from December 1st to December 25th each year. It features a series of daily programming puzzles that get more difficult every day & participants race to make it to the global leaderboard. I've participated in these challenges for various years to varying degrees and I loved learning about & impleneting new algorithms when my brute force solutions wouldn't suffice.",
-    tools: ['python'],
+    tools: ['Python'],
     githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
   }
 ]
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen px-36 mt-20 font-geist">
+    <div className="flex flex-col min-h-screen px-36 my-20 font-geist">
       <main className="flex flex-col grow gap-8 row-start-2 items-center sm:items-start">
         <div className="flex flex-row grow">
           <div className="flex flex-col font-rubik w-1/2">
@@ -59,7 +47,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="flex flex-col mb-12">
+        <div className="flex flex-col mb-12 mt-16">
           <div className="text-5xl font-rubik mb-8">EXPERIENCE</div>
           <div className="grid grid-cols-1 gap-8">
             {experienceData.map(experience => {
@@ -76,8 +64,8 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className="flex flex-col">
-          <div className="text-5xl font-rubik mb-8 mt-16">PROJECTS</div>
+        <div className="flex flex-col mb-8 mt-16">
+          <div className="text-5xl font-rubik mb-8">PROJECTS</div>
           <div className="grid grid-cols-2 gap-8">
             {projectListData.map(project => {
               return (
@@ -93,9 +81,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="row-start-3 mt-20 mb-12 flex gap-6 flex-wrap items-center justify-center bottom-0">
-        Email: hectormartinez.2978@gmail.com
-      </footer>
     </div>
   );
 }

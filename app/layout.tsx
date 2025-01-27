@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Rubik_Mono_One } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const rubikMonoOne = Rubik_Mono_One({
@@ -29,7 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} ${rubikMonoOne.variable} antialiased`}
       >
-        {children}
+        <Header/>
+        <div>{children}</div>
+        <Footer/>
       </body>
     </html>
   );
