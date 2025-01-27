@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Header = () => {
   return (
-    <div className="h-28 flex items-center justify-end gap-x-4 bg-foreground rounded-b-3xl px-36 boxShadow">
+    <div className="mx-auto max-w-screen-xl h-28 flex items-center justify-end gap-x-4 bg-foreground rounded-b-3xl px-4 sm:px-12 boxShadow">
       <div className="brightness-[80%] hover:brightness-[100%] duration-300">
         <Link href={"https://github.com/Hector-bit"}>
           <img src={"./icons/github.svg"} alt={"github"} width={50} height={50}/>

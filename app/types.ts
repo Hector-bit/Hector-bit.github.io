@@ -3,4 +3,5 @@ export type ProjectCardType = {
   description: string
   tools: string[]
   githubLink?: string
+  datas?: string
 }

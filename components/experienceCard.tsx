@@ -1,16 +1,19 @@
 import Link from "next/link"
 
+const headerStyle = 'text-lg sm:text-2xl'
+const textStyle = 'text-xs sm:text-base'
+
 const ExperienceCard = ({ name, description, role, tools, githubLink }: any) => {
   return (
     <div 
-      className="flex flex-col bg-primary rounded-xl p-6 border-2 border-primary hover:border-white pop-out-card"
+      className={`flex flex-col bg-primary rounded-xl p-2 sm:p-6 border-2 border-primary hover:border-white pop-out-card ${textStyle}`}
     >
-      <div className="font-rubik text-2xl">{name}</div>
-      <div className="text-md mb-4"><span className="text-md font-rubik">Role:</span>{role}</div>
+      <div className={` ${headerStyle} font-rubik sm:mb-4`}>{name}</div>
+      <div className="mb-4"><span className="font-rubik">Role:</span>{role}</div>
       <div className="mb-4">{description}</div>
-      <div className="text-md">
-        <span className="text-md font-rubik">Tools:</span>
-        {tools?.map((tool:any, index:number) => {
+      <div className="">
+        <span className="font-rubik">Tools:</span>
+        {tools?.map((tool:any) => {
           return (
             <span key={`${tool}-tool`} className="mr-2">
               {tool}
@@ -22,7 +25,7 @@ const ExperienceCard = ({ name, description, role, tools, githubLink }: any) => 
       </div>
       {githubLink && (
         <div>
-          <span className="text-md font-rubik">Github:</span> 
+          <span className="font-rubik">Github:</span> 
           <Link href={githubLink}>
             <span className="underline-offset-1">{name}</span>
           </Link>
