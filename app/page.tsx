@@ -5,6 +5,7 @@ import { ProjectCardType } from "./types";
 const experienceData:any[] = [
   { 
     name: 'Pixel Vault',
+    date: 'May 2022 - December 2024',
     role: 'Front-end engineer',
     description: "At Pixelvault, I was responsible for transforming Figma designs into fully functional, pixel-perfect ReactJS implementations. I played a key role in troubleshooting and debugging issues that arose when switching frameworks or integrating new packages, ensuring smooth transitions and maintaining code quality. Additionally, I collaborated closely with backend engineers and QA teams to validate features and ensure sites were optimized and deployment-ready. My time at Pixelvault strengthened my ability to work across teams, adapt to evolving tech stacks, and build seamless, high-performance web experiences.",
     tools: ['ReactJS,', 'NextJS,', 'Framer-motion,', 'Tailwind'],
@@ -12,6 +13,7 @@ const experienceData:any[] = [
   },
   { 
     name: 'Bellingham Makerspace',
+    date: 'June 2020 - December 2020',
     role: 'Voluteer web developer',
     description: "At Bellingham MakerSpace, I contributed as a volunteer developer, enhancing user functionality and refining frontend design. Working with WordPress and its plugins, I styled and improved the tool booking system and event/class calendars, making it easier for members to schedule time for the workshop equipment. A key focus of my work was ensuring universal design and accessibility, helping create a more inclusive and user-friendly experience for the MakerSpace community.",
     tools: ['Wordpress,', 'CSS,', 'Javascript'],
@@ -24,19 +26,19 @@ const projectListData:ProjectCardType[] = [
     name: 'adventOfCode',
     description: "Advent of Code (AoC) is an annual online event that runs from December 1st to December 25th each year. It features a series of daily programming puzzles that get more difficult every day & participants race to make it to the global leaderboard. I've participated in these challenges for various years to varying degrees and I loved learning about & implementing new algorithms when my brute force solutions wouldn't suffice.",
     tools: ['Python'],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
+    githubLink: { link: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020', name: 'Github Repository'},
+    webLink: { link:'https://adventofcode.com/', name: 'AdventOfCode.com'}
   },
   { 
     name: 'A Que Tacos',
-    description: "Under Contruction Website for a local businesses in Bellingham Washington",
-    tools: ['Typescript', 'NextJS', 'Postgres'],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
+    description: "🚧Under Contruction🚧 Website for a local businesses in Bellingham Washington",
+    tools: ['Typescript,', 'NextJS,', 'Postgres,', 'Full-stack Project'],
+    webLink: { link: 'https://aquetacos.com/', name: 'A Que Tacos'}
   },
   { 
     name: 'Godly Productions',
-    description: "Under Contruction Website for a local businesses in Bellingham Washington.",
-    tools: ['Typescript', 'NextJS'],
-    githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
+    description: "🚧Under Contruction🚧 Website for a Musci Studio in Bellingham Washington.",
+    tools: ['Typescript,', 'NextJS'],
   }
 ]
 
@@ -69,6 +71,7 @@ export default function Home() {
               <ExperienceCard
                 key={`${experience.name}-experience`}
                 name={experience.name} 
+                date={experience.date}
                 role={experience.role}
                 description={experience.description} 
                 tools={experience.tools} 
@@ -89,6 +92,7 @@ export default function Home() {
                 description={project.description} 
                 tools={project.tools} 
                 githubLink={project.githubLink}
+                webLink={project.webLink}
               />
             )
           })}

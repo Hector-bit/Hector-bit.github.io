@@ -8,7 +8,7 @@ const rubikMonoOne = Rubik_Mono_One({
   variable: "--font-rubik-mono-one",
   weight: '400',
   style: 'normal',
-  subsets: ["cyrillic", "latin"],
+  subsets: ["cyrillic", "latin"]
 });
 
 const geistMono = Geist_Mono({
