@@ -17,6 +17,7 @@ export default {
         foreground: "var(--foreground)",
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
+        tertiary: 'var(--tertiary)',
       },
       boxShadow: {
         'one': '0 3px 6px -15px rgba(0, 0, 0, 0.3)'

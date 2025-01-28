@@ -7,7 +7,7 @@ const textStyle = 'text-xs sm:text-base'
 const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectCardType) => {
   return (
     <div 
-      className={`flex flex-col bg-primary rounded-xl p-2 sm:p-6 border-2 border-primary hover:border-white pop-out-card ${textStyle}`}
+      className={`flex flex-col bg-primary rounded-xl p-2 sm:p-6 border-2 border-foreground focus:border-white ${textStyle}`}
     >
       <div className={` ${headerStyle} font-rubik text-2xl sm:mb-4`}>{name}</div>
       <div className="mb-4">{description}</div>
@@ -29,15 +29,18 @@ const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectC
           <div>
             <span className="text-md font-rubik">Github:</span> 
             <Link href={githubLink.link}>
-              <span className="underline-offset-1">{githubLink.name}</span>
+              <span>{githubLink.name}</span>
             </Link>
           </div>
         )}
         {webLink && (
           <div>
-            <span className="text-md font-rubik">Website:</span> 
+            {/* <span className="text-md font-rubik">Website:</span>  */}
             <Link href={webLink.link}>
-              <span className="underline-offset-1">{webLink.name}</span>
+              <button className="btn">
+                {webLink.name}
+              </button>
+              {/* <span className="underline">{webLink.name}</span> */}
             </Link>
           </div>
         )}

@@ -42,6 +42,17 @@ const projectListData:ProjectCardType[] = [
   }
 ]
 
+const educationData:any[] = [
+  { 
+    name: 'Pixel Vault',
+    date: 'May 2022 - December 2024',
+    role: 'Front-end engineer',
+    description: "At Pixelvault, I was responsible for transforming Figma designs into fully functional, pixel-perfect ReactJS implementations. I played a key role in troubleshooting and debugging issues that arose when switching frameworks or integrating new packages, ensuring smooth transitions and maintaining code quality. Additionally, I collaborated closely with backend engineers and QA teams to validate features and ensure sites were optimized and deployment-ready. My time at Pixelvault strengthened my ability to work across teams, adapt to evolving tech stacks, and build seamless, high-performance web experiences.",
+    tools: ['ReactJS,', 'NextJS,', 'Framer-motion,', 'Tailwind'],
+    // githubLink: 'https://github.com/Hector-bit/adventOfCode/tree/main/year2020'
+  }
+]
+
 const headerStyle = 'text-2xl sm:text-5xl'
 const textStyle = 'text-sm sm:text-base'
 
@@ -98,6 +109,23 @@ export default function Home() {
           })}
         </div>
       </div>
+      {/* <div className="flex flex-col mb-8 mt-16">
+        <div className={`${headerStyle} font-rubik mb-4 sm:mb-8`}>EDUCATION</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {educationData.map(project => {
+            return (
+              <ExperienceCard
+                key={`${project.name}-project`}
+                name={project.name} 
+                description={project.description} 
+                tools={project.tools} 
+                githubLink={project.githubLink}
+                webLink={project.webLink}
+              />
+            )
+          })}
+        </div>
+      </div> */}
     </main>
   );
 }

@@ -6,9 +6,9 @@ const textStyle = 'text-xs sm:text-base'
 const ExperienceCard = ({ name, description, date, role, tools, githubLink }: any) => {
   return (
     <div 
-      className={`flex flex-col bg-primary rounded-xl p-2 sm:p-6 border-2 border-primary hover:border-white pop-out-card ${textStyle}`}
+      className={`flex flex-col bg-primary rounded-xl p-2 sm:p-6 border-2 border-foreground pop-out-card ${textStyle}`}
     >
-      <div className={` ${headerStyle} font-rubik `}>{name}</div>
+      <div className={`${headerStyle} font-rubik`}>{name}</div>
       <div className=""><span className="font-rubik">Date:</span>{date}</div>
       <div className="mb-4"><span className="font-rubik">Role:</span>{role}</div>
       <div className="mb-4">{description}</div>
