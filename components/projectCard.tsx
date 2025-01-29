@@ -25,25 +25,37 @@ const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectC
           })}
         
         </div>
-        {githubLink && (
-          <div>
-            <span className="text-md font-rubik">Github:</span> 
-            <Link href={githubLink.link}>
-              <span>{githubLink.name}</span>
-            </Link>
-          </div>
-        )}
-        {webLink && (
-          <div>
-            {/* <span className="text-md font-rubik">Website:</span>  */}
-            <Link href={webLink.link}>
-              <button className="btn">
-                {webLink.name}
-              </button>
-              {/* <span className="underline">{webLink.name}</span> */}
-            </Link>
-          </div>
-        )}
+        <div className="flex flex-row gap-4">
+          {githubLink && (
+            // <div>
+            //   <span className="text-md font-rubik">Github:</span> 
+            //   <Link href={githubLink.link}>
+            //     <span>{githubLink.name}</span>
+            //   </Link>
+            // </div>
+                      <div>
+                      {/* <span className="text-md font-rubik">Website:</span>  */}
+                      <Link href={githubLink.link}>
+                        <button className="btn">
+                          {githubLink.name}
+                        </button>
+                        {/* <span className="underline">{webLink.name}</span> */}
+                      </Link>
+                    </div>
+          )}
+          {webLink && (
+            <div>
+              {/* <span className="text-md font-rubik">Website:</span>  */}
+              <Link href={webLink.link}>
+                <button className="btn">
+                  {webLink.name}
+                </button>
+                {/* <span className="underline">{webLink.name}</span> */}
+              </Link>
+            </div>
+          )}
+
+        </div>
 
       </div>
     </div>
