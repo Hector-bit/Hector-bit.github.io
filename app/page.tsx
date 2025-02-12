@@ -32,7 +32,7 @@ const projectListData:ProjectCardType[] = [
   { 
     name: 'A Que Tacos',
     description: "🚧Under Contruction🚧 Website for a local businesses in Bellingham Washington",
-    tools: ['Typescript,', 'NextJS,', 'Postgres,', 'Full-stack Project'],
+    tools: ['Typescript,', 'NextJS,', 'Postgres,', 'Full-stack Project', 'Clover API'],
     webLink: { link: 'https://aquetacos.com/', name: 'A Que Tacos'}
   },
   { 
