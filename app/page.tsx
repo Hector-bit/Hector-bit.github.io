@@ -38,7 +38,7 @@ const projectListData:ProjectCardType[] = [
   { 
     name: 'Godly Productions',
     description: "🚧Under Contruction🚧 Website for a Musci Studio in Bellingham Washington.",
-    tools: ['Typescript,', 'NextJS'],
+    tools: ['Typescript,', 'NextJS,', 'SQLite'],
   }
 ]
 
