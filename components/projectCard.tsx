@@ -1,10 +1,11 @@
 import { ProjectCardType } from "@/app/types"
 import Link from "next/link"
+import Image from "next/image"
 
 const headerStyle = 'text-lg sm:text-2xl leading-4 mb-2'
 const textStyle = 'text-xs sm:text-base'
 
-const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectCardType) => {
+const ProjectCard = ({ name, description, tools, githubLink, webLink, imgLink }: ProjectCardType) => {
   return (
     <div 
       className={`flex flex-col bg-primary rounded-xl p-2 sm:p-6 border-2 border-foreground focus:border-white ${textStyle}`}
@@ -12,7 +13,7 @@ const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectC
       <div className={` ${headerStyle} font-rubik text-2xl sm:mb-4`}>{name}</div>
       <div className="mb-4">{description}</div>
 
-      <div className="flex flex-col gap-y-2 ">
+      <div className="flex flex-col gap-y-4">
         <div className="text-md">
           <span className="text-md font-rubik">Tools:</span>
           {tools?.map((tool:any) => {
@@ -34,7 +35,6 @@ const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectC
             //   </Link>
             // </div>
                       <div>
-                      {/* <span className="text-md font-rubik">Website:</span>  */}
                       <Link href={githubLink.link}>
                         <button className="btn">
                           {githubLink.name}
@@ -45,7 +45,6 @@ const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectC
           )}
           {webLink && (
             <div>
-              {/* <span className="text-md font-rubik">Website:</span>  */}
               <Link href={webLink.link}>
                 <button className="btn">
                   {webLink.name}
@@ -56,6 +55,11 @@ const ProjectCard = ({ name, description, tools, githubLink, webLink }: ProjectC
           )}
 
         </div>
+        {imgLink && (
+          <div className="flex justify-center w-full">
+            <Image src={imgLink} alt={"Project Cover"} width={420} height={420} unoptimized/>
+          </div>
+        )}
 
       </div>
     </div>

@@ -4,5 +4,6 @@ export type ProjectCardType = {
   tools: string[]
   githubLink?: { link: string, name: string}
   webLink?: { link: string, name: string}
-  datas?: string
+  datas?: string,
+  imgLink?: string
 }

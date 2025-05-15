@@ -31,14 +31,32 @@ const projectListData:ProjectCardType[] = [
   },
   { 
     name: 'A Que Tacos',
-    description: "🚧Under Contruction🚧 Website for a local businesses in Bellingham Washington",
+    description: `Developed a custom online ordering platform using Next.js with server-side rendering (SSR) for improved performance and SEO. \n
+                  Integrated Clover API to create and manage customer orders, enabling seamless online checkout and payment processing.\n
+                  Utilized TypeScript to ensure code quality and scalability.\n
+                  Implemented Google Analytics to monitor user behavior and website traffic, helping the restaurant gain insights into customer engagement.`,
     tools: ['Typescript,', 'NextJS,','Clover API'],
     webLink: { link: 'https://aquetacos.com/', name: 'A Que Tacos'}
   },
   { 
     name: 'Godly Productions',
-    description: "🚧Under Contruction🚧 Website for a Musci Studio in Bellingham Washington.",
+    description: `Built a dynamic frontend using Next.js and TypeScript to showcase services, artist profiles, and booking information.\n
+                  Connected the frontend to a custom MongoDB database via API routes to fetch and display real-time studio data.\n
+                  Focused on responsive design and fast load times to ensure a smooth user experience across devices.\n
+                  Helped improve the studio's online presence and client engagement by streamlining content updates and bookings.`,
     tools: ['Typescript,', 'NextJS,', 'SQLite'],
+    webLink: { link: 'https://godlyproductions.com/', name: 'Godly Productions'}
+  },
+    { 
+    name: 'Godly Productions admin + database',
+    description: `Developed a full-stack admin platform that allows studio staff to manage artists, albums, and events through a user-friendly interface. \n
+                  Designed and implemented a MongoDB schema using Mongoose, with a scalable backend built on NestJS for secure and structured data handling.
+                  Built a responsive frontend with Next.js and TypeScript to enable real-time content updates without needing developer support.
+                  Continuously improved the system based on client feedback, adding new features and enhancing usability to support evolving studio needs.`,
+    tools: ['Typescript,', 'NextJS,', 'MongoDB', 'Mongoose', 'NestJS'],
+    imgLink: 'projectImages/godlyDatabase.png',
+    webLink: { link: 'https://github.com/Hector-bit/godlyAdmin', name: 'Godly Productions Admin Github'},
+    githubLink: { link: 'https://github.com/Hector-bit/godlynestdb', name: 'Godly Productions Database Github'},
   }
 ]
 
@@ -104,6 +122,7 @@ export default function Home() {
                 tools={project.tools} 
                 githubLink={project.githubLink}
                 webLink={project.webLink}
+                imgLink={project.imgLink}
               />
             )
           })}
