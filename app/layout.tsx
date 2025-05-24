@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Rubik_Mono_One } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const rubikMonoOne = Rubik_Mono_One({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <div>{children}</div>
         <Footer/>
       </body>
+      <GoogleAnalytics gaId="G-S1SEFQWX60"/>
     </html>
   );
 }
